@@ -17,7 +17,7 @@ const RecipeList = ({ recipedata, loading, error, Favoritefood }) => {
                     <button onClick={() => {
                         Favoritefood(item)
                         navigate('./FavoriteList')
-                    }}>Add to Favorites
+                    }}>Add to Favorite
                     </button>
                 </div>
             ))}
