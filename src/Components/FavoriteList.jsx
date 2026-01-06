@@ -9,7 +9,6 @@ const FavoriteList = ({ favitem, deletefav }) => {
                     <h2>{item.strMeal}</h2>
                     <button onClick={() => deletefav(idx)}>Delete</button>
                 </div>
-
             ))}
         </div>
     )

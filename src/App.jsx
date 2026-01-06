@@ -29,7 +29,11 @@ const App = () => {
     setloading(false)
     setrecipeName('')
   }
-
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      fetchdata()
+    }
+  }
   function Favoritefood(item) {
     const exists = favitem.some(f => f.strMeal === item.strMeal)
     if (!exists) {
@@ -54,12 +58,13 @@ const App = () => {
           path="/"
           element={
             <>
-              <SearhBox
-                recipeName={recipeName}
-                setrecipeName={setrecipeName}
-                fetchdata={fetchdata}
-                loading={loading}
-              />
+                <SearhBox
+                  recipeName={recipeName}
+                  setrecipeName={setrecipeName}
+                  fetchdata={fetchdata}
+                  loading={loading}
+                  handleKeyDown={handleKeyDown}
+                />
 
               <RecipeList
                 recipedata={recipedata}
